@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open URLs in Separate Tabs</title>
+    <script>
+        function openTabs() {
+            var urls = window.location.search.substr(1).split("&");
+            urls.forEach(function(url) {
+                window.open(decodeURIComponent(url), "_blank");
+            });
+            window.close();
+        }
+        window.onload = openTabs;
+    </script>
+</head>
+<body></body>
+</html>
